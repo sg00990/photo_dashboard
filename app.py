@@ -509,8 +509,9 @@ with tabs[0]:
         for lens, n in lens_counts.items():
             st.write(f"- {lens} — {pct(n, n_total):.0f}% ({n} photos)")
 
+    lens_df = lens_counts.rename_axis("lens").reset_index(name="count")
     fig_lens = px.bar(
-        lens_counts.reset_index().rename(columns={"index": "lens", "lens": "count"}) if "count" in lens_counts.reset_index().columns else lens_counts.rename_axis("lens").reset_index(name="count"),
+        lens_df,
         x="count", y="lens", orientation="h", title="Photos per lens",
     )
     fig_lens.update_layout(yaxis={"categoryorder": "total ascending"})
