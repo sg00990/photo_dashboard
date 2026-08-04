@@ -1,0 +1,6 @@
+streamlit>=1.32
+pandas>=2.0
+numpy>=1.24
+pillow>=10.0
+plotly>=5.18
+pillow-heif>=0.15   # optional: enables iPhone .HEIC support
