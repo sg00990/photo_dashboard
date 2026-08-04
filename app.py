@@ -3,7 +3,7 @@
 Drag in a folder (as a .zip) or select a batch of photos and get a personalized
 shooting-habits dashboard: gear usage, aperture/focal length/ISO/shutter histograms,
 time-of-day + calendar heatmap, GPS map, exposure-triangle scatter, and plain-English
-"AI insights" derived from your own data.
+insights derived from your own data.
 
 Run with:  streamlit run app.py
 """
@@ -456,12 +456,12 @@ if not uploaded_files:
     st.markdown(
         """
         **What you'll get:**
-        - 🎯 Gear usage: camera body, lens breakdown, favorite focal length
-        - 🔘 Aperture, focal length, ISO, and shutter speed histograms
-        - 🕒 Time-of-day patterns and a GitHub-style shooting calendar
-        - 🗺️ A map of every geotagged photo
-        - 📈 An ISO vs. aperture exposure-triangle scatter plot
-        - 🤖 Plain-English insights about your own shooting habits
+        - Gear usage: camera body, lens breakdown, favorite focal length
+        - Aperture, focal length, ISO, and shutter speed histograms
+        - Time-of-day patterns and a GitHub-style shooting calendar
+        - A map of every geotagged photo
+        - An ISO vs. aperture exposure-triangle scatter plot
+        - Plain-English insights about your own shooting habits
         """
     )
     st.stop()
@@ -489,8 +489,8 @@ n_total = len(df)
 n_with_exif = df[["camera", "focal_length", "fnumber", "iso"]].notna().any(axis=1).sum()
 st.success(f"Loaded **{n_total}** photos — {n_with_exif} with usable EXIF data.")
 
-tabs = st.tabs(["🛠️ Gear", "🔘 Aperture", "📏 Focal Length", "🎛️ ISO", "⚡ Shutter Speed",
-                "🕒 Time of Day", "📅 Calendar", "🗺️ Map", "📈 Exposure Triangle", "🤖 AI Insights"])
+tabs = st.tabs(["Gear", "Aperture", "Focal Length", "ISO", "Shutter Speed",
+                "Time of Day", "Calendar", "Map", "Exposure Triangle", "Insights"])
 
 # ---------------- GEAR ----------------
 with tabs[0]:
@@ -665,7 +665,7 @@ with tabs[8]:
 
 # ---------------- AI INSIGHTS ----------------
 with tabs[9]:
-    st.subheader("🤖 AI Insights")
+    st.subheader("Insights")
     st.caption("Plain-English observations, computed directly from your photos' metadata.")
     insights = generate_insights(df)
     if not insights:
