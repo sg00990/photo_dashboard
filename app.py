@@ -436,7 +436,7 @@ def generate_insights(df):
 # ----------------------------------------------------------------------------
 
 st.title("📸 Photo EXIF Dashboard")
-st.caption("Drop in a folder of photos as a **.zip**, or select multiple images directly. Everything runs locally in this session — nothing is uploaded anywhere else.")
+st.caption("Drop in a folder of photos as a **.zip**, or select multiple images directly. Everything runs locally in this session, so nothing is uploaded anywhere else.")
 
 with st.sidebar:
     st.header("Import")
@@ -449,7 +449,7 @@ with st.sidebar:
     if not HEIC_SUPPORTED:
         st.caption("ℹ️ Install `pillow-heif` to support iPhone .HEIC files.")
     st.markdown("---")
-    st.caption("EXIF data (camera settings, timestamps, GPS) is read directly from your files in-browser/session memory — nothing is sent to any AI or third party.")
+    st.caption("EXIF data (camera settings, timestamps, GPS) is read directly from your files in-browser/session memory. Nothing is sent to any AI or third party.")
 
 if not uploaded_files:
     st.info("👈 Upload a .zip of your photo folder or select images to get started.")
@@ -470,7 +470,7 @@ with st.spinner("Reading files..."):
     images = load_images_from_uploads(uploaded_files)
 
 if not images:
-    st.error("No readable images were found in your upload. Make sure your zip contains .jpg/.jpeg/.tif/.png files (or .heic if pillow-heif is installed).")
+    st.error("No readable images were found in your upload. Make sure your zip contains .jpg/.jpeg/.tif/.png/.heic files.")
     st.stop()
 
 # `images` is already a list of (filename, raw_bytes) — no re-encoding needed,
