@@ -1,11 +1,11 @@
 A Streamlit app that turns a folder of photos into a personalized "shooting habits" dashboard, built entirely from EXIF metadata already embedded in your files.
-Gear — camera body breakdown, lens usage %, favorite focal length, zoom range per lens
-Aperture — histogram + "you shoot at f/X almost Y% of the time"
-Focal Length — interactive histogram, top-3 favorite focal lengths
-ISO — average ISO, % above 3200, % at base ISO, bucketed histogram
-Shutter Speed — histogram ordered fast→slow, action vs. static shooter stats
-Time of Day — hourly histogram, golden-hour percentage
-Calendar — GitHub-style heatmap of every day you shot
-Map — every geotagged photo plotted (only shown if GPS data exists)
-Exposure Triangle — ISO vs. aperture scatter, colored by shutter speed
-AI Insights — plain-English, data-driven observations about your habits (no external AI call — computed directly from your stats)
+- Gear — camera body breakdown, lens usage %, favorite focal length, zoom range per lens
+- Aperture — histogram + "you shoot at f/X almost Y% of the time"
+- Focal Length — interactive histogram, top-3 favorite focal lengths
+- ISO — average ISO, % above 3200, % at base ISO, bucketed histogram
+- Shutter Speed — histogram ordered fast→slow, action vs. static shooter stats
+- Time of Day — hourly histogram, golden-hour percentage
+- Calendar — GitHub-style heatmap of every day you shot
+- Map — every geotagged photo plotted (only shown if GPS data exists)
+- Exposure Triangle — ISO vs. aperture scatter, colored by shutter speed
+- AI Insights — plain-English, data-driven observations about your habits (no external AI call — computed directly from your stats)
