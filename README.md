@@ -8,4 +8,4 @@ A Streamlit app that turns a folder of photos into a personalized "shooting habi
 - Calendar — GitHub-style heatmap of every day you shot
 - Map — every geotagged photo plotted (only shown if GPS data exists)
 - Exposure Triangle — ISO vs. aperture scatter, colored by shutter speed
-- AI Insights — plain-English, data-driven observations about your habits (no external AI call — computed directly from your stats)
+- AI Insights — plain-English, data-driven observations about the user's habits
